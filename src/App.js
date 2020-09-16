@@ -14,7 +14,11 @@ class App extends Component {
 
   // Method to make api call
   componentDidMount() {
-    fetch("https://lingua-robot.p.rapidapi.com/language/v1/entries/en/mathematics", {
+
+    var wordToSearch = "mathematics";
+    var URL = "https://lingua-robot.p.rapidapi.com/language/v1/entries/en/" + wordToSearch;
+    
+    fetch(URL, {
 	    "method": "GET",
 	    "headers": {
 		    "x-rapidapi-host": "lingua-robot.p.rapidapi.com",
@@ -37,7 +41,7 @@ class App extends Component {
     if(!isLoaded) {
       return (
         <div className="App">
-          <div className="winodw">
+          <div className="window">
             <p>Loading...</p>
           </div>
         </div>
