@@ -37,7 +37,7 @@ class Word extends Component {
     
         if(!isLoaded) {
             return (
-                <div className="window">
+                <div className="container">
                     <p>Loading...</p>
                 </div>
             )
@@ -45,12 +45,9 @@ class Word extends Component {
         else {
             console.log(wordData);
             return (
-                <div className="window">
-                    <h1>Welcome to Vocabulearn!</h1>
-                    <div className="container">
-                        <p>Word: {wordData.entries[0].entry} ({wordData.entries[0].lexemes[0].partOfSpeech})</p>
-                        <p>Definition: {wordData.entries[0].lexemes[0].senses[0].definition}</p>
-                    </div>
+                <div className="container">
+                    <p>Word: {wordData.entries[0].entry} ({wordData.entries[0].lexemes[0].partOfSpeech})</p>
+                    <p>Definition: {wordData.entries[0].lexemes[0].senses[0].definition}</p>
                 </div>
             );
         }

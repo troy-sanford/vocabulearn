@@ -7,7 +7,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Word />
+        <div className="window">
+          <h1>Welcome to Vocabulearn!</h1>
+          <Word />
+        </div>
       </div>
     )
   }  
