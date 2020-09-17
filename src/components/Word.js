@@ -12,7 +12,9 @@ class Word extends Component {
 
     componentDidMount() {
 
-        var wordToSearch = "mathematics";
+        // TO DO: run prop through filter to ensure that it is formatted appropriately
+        var wordToSearch = this.props.wordToSearch;
+
         var URL = "https://lingua-robot.p.rapidapi.com/language/v1/entries/en/" + wordToSearch;
     
         fetch(URL, {
@@ -46,8 +48,9 @@ class Word extends Component {
             console.log(wordData);
             return (
                 <div className="container">
-                    <p>Word: {wordData.entries[0].entry} ({wordData.entries[0].lexemes[0].partOfSpeech})</p>
-                    <p>Definition: {wordData.entries[0].lexemes[0].senses[0].definition}</p>
+                    <p>{wordData.entries[0].entry} ({wordData.entries[0].lexemes[0].partOfSpeech}) - </p>
+                    
+                    <p>{wordData.entries[0].lexemes[0].senses[0].definition}</p>
                 </div>
             );
         }
