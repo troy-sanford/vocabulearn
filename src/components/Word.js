@@ -45,7 +45,6 @@ class Word extends Component {
             )
         } 
         else {
-            console.log(wordData);
             return (
                 <div className="container">
                     <p>{wordData.entries[0].entry} ({wordData.entries[0].lexemes[0].partOfSpeech}) - </p>
