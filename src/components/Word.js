@@ -5,8 +5,8 @@ class Word extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            wordData: [],
             isLoaded: false,
+            wordData: [],
         }
     }
 
@@ -45,13 +45,23 @@ class Word extends Component {
             )
         } 
         else {
-            return (
-                <div className="container">
-                    <p>{wordData.entries[0].entry} ({wordData.entries[0].lexemes[0].partOfSpeech}) - </p>
-                    
-                    <p>{wordData.entries[0].lexemes[0].senses[0].definition}</p>
-                </div>
-            );
+            if (wordData.entries[0]) {
+                return (
+                    <div className="container">
+                        <p>{wordData.entries[0].entry} ({wordData.entries[0].lexemes[0].partOfSpeech}) - </p>
+                        
+                        <p>{wordData.entries[0].lexemes[0].senses[0].definition}</p>
+                    </div>
+                );
+            }
+            else {
+                return (
+                    <div className="container">
+                        <p>elsed</p>
+                    </div>
+                )
+            }
+            
         }
     }
 }
