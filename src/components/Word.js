@@ -12,7 +12,6 @@ class Word extends Component {
 
     componentDidMount() {
 
-        // TO DO: run prop through filter to ensure that it is formatted appropriately
         var wordToSearch = this.props.wordToSearch;
 
         var URL = "https://lingua-robot.p.rapidapi.com/language/v1/entries/en/" + wordToSearch;
@@ -45,23 +44,13 @@ class Word extends Component {
             )
         } 
         else {
-            if (wordData.entries[0]) {
-                return (
-                    <div className="container">
-                        <p>{wordData.entries[0].entry} ({wordData.entries[0].lexemes[0].partOfSpeech}) - </p>
-                        
-                        <p>{wordData.entries[0].lexemes[0].senses[0].definition}</p>
-                    </div>
-                );
-            }
-            else {
-                return (
-                    <div className="container">
-                        <p>elsed</p>
-                    </div>
-                )
-            }
-            
+            return (
+                <div className="container">
+                    <p>{wordData.entries[0].entry} ({wordData.entries[0].lexemes[0].partOfSpeech}) - </p>
+                    
+                    <p>{wordData.entries[0].lexemes[0].senses[0].definition}</p>
+                </div>
+            );
         }
     }
 }

@@ -10,7 +10,7 @@ class WordList extends Component {
     componentDidMount() {
         
         var randomWord = require('random-word-by-length');
-        for (var i=0; i<5; i++) {
+        for (var i=0; i<10; i++) {
             var word = randomWord();
             console.log("trying word: " + word);
             this.addToList(word);
@@ -20,7 +20,8 @@ class WordList extends Component {
     addToList(word) {
         var URL = "https://lingua-robot.p.rapidapi.com/language/v1/entries/en/";
     
-        fetch(URL + word, {
+        fetch(URL + word, 
+            {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "lingua-robot.p.rapidapi.com",
