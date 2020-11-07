@@ -8,9 +8,9 @@ class WordList extends Component {
     }
 
     componentDidMount() {
-        
+
         var randomWord = require('random-word-by-length');
-        for (var i=0; i<10; i++) {
+        for (var i=0; i<5; i++) {
             var word = randomWord();
             console.log("trying word: " + word);
             this.addToList(word);
