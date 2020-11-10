@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {getWordData} from './Api.js';
 
 class Word extends Component {
 
@@ -10,25 +11,13 @@ class Word extends Component {
         }
     }
 
-    componentDidMount() {
+    async componentDidMount() {
 
-        var wordToSearch = this.props.wordToSearch;
-
-        var URL = "https://lingua-robot.p.rapidapi.com/language/v1/entries/en/" + wordToSearch;
-    
-        fetch(URL, {
-            "method": "GET",
-            "headers": {
-                "x-rapidapi-host": "lingua-robot.p.rapidapi.com",
-                "x-rapidapi-key": "52b331551bmsh5d12687ab579a71p1ecf33jsn49f8d2555110"
-            }
-        })
-        .then(res => res.json())
-        .then(json => {
-            this.setState({
-                isLoaded: true,
-                wordData: json,
-            })
+        const data = await getWordData(this.props.wordToSearch);
+        
+        this.setState({
+            isLoaded: true,
+            wordData: data,
         })
     }
 
