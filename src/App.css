@@ -9,22 +9,20 @@
 
 .window {
   background-color: #abb1f8;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
 }
 
 .container {
-  margin-top: 200px;
-  padding: 50px;
-  width: 600px;
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 700px;
   margin: 10px auto 10px auto;
   border: 2px dotted #333333;
   align-items: center;
   text-align: center;
-  position: relative;
-  top: 100px;
 }
 
 .App-link {
