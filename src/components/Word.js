@@ -30,6 +30,14 @@ class Word extends Component {
         })
     }
 
+    // function to generate a random rgb value to be used for backgroundColor for each Word container
+    generateRandomColor() {
+        let r = Math.round((Math.random() * 255));
+        let g = Math.round((Math.random() * 255));
+        let b = Math.round((Math.random() * 255));
+        return 'rgb('+ r +', '+ g +', '+ b +')';
+    }
+
     render() {
         // make local variables to access the state variables
         var { isLoaded, wordData } = this.state;
@@ -52,9 +60,10 @@ class Word extends Component {
             var partOfSpeech = wordData.entries[0].lexemes[0].partOfSpeech;
             var definition = wordData.entries[0].lexemes[0].senses[0].definition;
             
-            // return a container that displays the word data
+            // return a container that displays the word data,
+            // and set the backgroundColor to a randomly generated color
             return (
-                <div className="container">
+                <div className="container" style={{backgroundColor: this.generateRandomColor()}}>
                     <p>{word} ({partOfSpeech}) - </p>
                     
                     <p>{definition}</p>

@@ -2,13 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .window {
-  background-color: #abb1f8;
+  background-color: #dbdbdb;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
@@ -16,11 +11,12 @@
 
 .container {
   position: relative;
+  padding-top: 2%;
+  padding-bottom: 2%;
   padding-left: 5%;
   padding-right: 5%;
   width: 700px;
   margin: 10px auto 10px auto;
-  border: 2px dotted #333333;
   align-items: center;
   text-align: center;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import WordList from './components/WordList';
+import Popup from 'reactjs-popup';
 import './App.css';
 
 class App extends Component {
@@ -8,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="window">
-          <h1>Welcome to VocabuLearn!</h1>
+          <h1>Welcome to Vocabulearn!</h1>
           <WordList/>
         </div>
       </div>
