@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import WordList from './components/WordList';
-import Popup from 'reactjs-popup';
 import './App.css';
 
 class App extends Component {
