@@ -6,7 +6,7 @@ class WordList extends Component {
 
     state = {
         // empty array to store string values of words to be searched
-        wordsToSearch: []
+        wordsToSearch: [],
     }
 
     // called whenever a WordList component is mounted
@@ -59,9 +59,10 @@ class WordList extends Component {
     }
 
     render() {
-        // create local variable to access wordsToSearch array from state
+        // create local variables to access state variables
         var wordList = this.state.wordsToSearch;
-        // iterate through our list of words, passing each element in the array as a prop to the Word class
+        // iterate through our list of words, passing each element in the array,
+        // and a randomly generated color as props to the Word component
         return wordList.map((word) => (
             <Word wordToSearch={word}/>
         ))
