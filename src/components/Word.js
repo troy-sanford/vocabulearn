@@ -54,9 +54,7 @@ class Word extends Component {
         // if the content has loaded...
         else {
             // organize data from json object into local variables
-            // the json objects for different words are organized uniquely, and may or may not contain the same data
-            // the only consistent data for all words are the part of speech and the definition
-            var word = wordData.entries[0].entry;
+            var word = wordData.entries[0].lexemes[0].lemma;
             var partOfSpeech = wordData.entries[0].lexemes[0].partOfSpeech;
             var definition = wordData.entries[0].lexemes[0].senses[0].definition;
             
