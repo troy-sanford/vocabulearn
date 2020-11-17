@@ -8,4 +8,4 @@ Vocabulearn is a web application designed to help English speakers expand their 
 
 ## System requirements
 
-Any modern web browser (Chrome, Safari, Firefox)
+Updated version of Google Chrome web browser
