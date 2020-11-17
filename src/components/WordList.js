@@ -29,6 +29,7 @@ class WordList extends Component {
 
     // an asynchronous, recursive API call to validate that the dictionary we are using is able to return
     // the necessary data for each word
+    // accepts a String value "word" as parameter
     async addToList(word) {
         
         // pass the word as an argument to the getWordData function,
