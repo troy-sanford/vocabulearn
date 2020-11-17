@@ -9,12 +9,12 @@ class App extends Component {
       <div className="App">
         <div className="window">
           <h1>Welcome to Vocabulearn!</h1>
+          <a href="https://github.com/troy-sanford/vocabulearn/">Link to GitHub</a>
           <WordList/>
         </div>
       </div>
     )
   }  
-
 }
 
 export default App;
